@@ -1,0 +1,135 @@
+$maincolor: #17a2b8;
+$containerHeight: 320px;
+$white: #EAEAEA;
+
+@mixin boxFrom {
+    margin-top: 50px;
+    max-width: 600px;
+    height: $containerHeight;
+    border: 1px solid #9C9C9C;
+    background-color: $white;
+}
+
+.box-white{
+    background: $white;
+    padding: 0;
+    h1, h2, h3, h4, h5, p {
+        margin: 0;
+    }
+}
+
+.text-main-color{
+    color: $maincolor;
+}
+
+#logout-btn{
+    border: solid $maincolor 2px;
+    color: $maincolor;
+    padding: 0px 8px;
+    padding-top: 4px;
+    margin: 4px 8px;
+    a{
+        text-decoration: none;
+        color: $maincolor;
+        &:visited{
+            color: $maincolor;
+        }
+    }
+    &:hover {
+        background-color: lighten($color: $maincolor, $amount: 50);
+    }
+}
+
+#VWL-img {
+    max-width: 200px;
+}
+
+body{
+    background-color: $maincolor;
+}
+
+#login .container #login-row #login-column #login-box{
+    @include boxFrom;
+}
+#signup .container #login-row #login-column #login-box{
+    @include boxFrom;
+    height: $containerHeight + 170px;
+}
+#profile .container #login-row #login-column #login-box{
+    @include boxFrom;
+    height: $containerHeight + 250px;
+}
+#contact .container #login-row #login-column #login-box{
+    @include boxFrom;
+    height: $containerHeight + 310px;
+}
+#login .container #login-row #login-column #login-box #login-form, #signup .container #login-row #login-column #login-box #login-form, #contact .container #login-row #login-column #login-box #login-form  {
+    padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link, #signup .container #login-row #login-column #login-box #login-form #register-link, #profile .container #login-row #login-column #login-box #login-form #register-link, #contact .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+}
+
+
+
+
+
+
+
+
+.navbar {
+    border: 1px solid #9C9C9C;
+    background-color: $white;
+    #logout-btn{
+        border: solid $maincolor 2px;
+        color: $maincolor;
+        padding: 0px 8px;
+        padding-top: 4px;
+        margin: 4px 8px;
+        a{
+            text-decoration: none;
+            color: $maincolor;
+            &:visited{
+                color: $maincolor;
+            }
+        }
+        &:hover {
+            background-color: lighten($color: $maincolor, $amount: 50);
+        }
+    }
+    #username{
+        padding: 6px 10px;
+        color: $maincolor;
+    }
+}
+
+
+#logo{
+    max-width:65px;
+}
+
+.webgl-content{
+    background-color: $white;
+    padding: 22px;
+    box-shadow: 0 0 2px 2px $maincolor inset;
+}
+
+#canvas{
+    background-color: $white;
+    padding: 22px;   
+    border: none;
+    box-shadow: 0 0 2px 2px $maincolor inset;
+}
+
+.drums{
+    background-color:white;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    .drums_img{
+        border: solid  5px white;
+        background: none;
+        &:hover{
+            border: solid 5px #ccc;
+        }
+    }
+}
